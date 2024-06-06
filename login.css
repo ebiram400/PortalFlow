@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+body{
+    width: 100%;
+    height: 95vh;
+}
+
+/* ------------back to home--------- */
+.backToHome{
+    display: flex;
+    width: fit-content;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.nok-back{
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 30px solid #30AF5E;
+    border-bottom: 25px solid transparent;
+
+}
+.reg-back{
+    width: 90px;
+    height: 50px;
+    background-color: #30AF5E;
+    text-align: center;
+    padding: 5px;
+}
+
+/* -------------logo------------*/
+.logo-page-login {
+    width: 13vw;
+    position: absolute;
+    top: 3%;
+    left: 45%;
+}
+
+/* ----------regtangle----------- */
+.regtangel{
+    height: 60%;
+    width: 45%;
+    background-color: #1F3777;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 8%;
+    margin-left: 29%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.8);
+}
+.guid-text{
+    color: #fff;
+    font-size: large;
+    margin-top: 9%;
+}
+#Inputphon{
+    border: 1.5px solid #fff;
+    background-color: #1F3777;
+    border-radius: 30px;
+    height: 30px;
+    color: #30AF5E;
+    text-align: center;
+    font-family: Arial;
+    margin-top: .45rem;
+    outline: none;
+    box-shadow: inset 1px 2px 4px #ffffff7a;
+}
+.last-col{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: .7rem;
+}
+.new-otp{
+    color: #30AF5E;
+    width: auto;
+    text-wrap: nowrap;
+}
+.timer{
+    color: #fff;
+    font-family: Arial;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+#otp{
+    border: 1.5px solid #fff;
+    background-color: #1F3777;
+    border-radius: 30px;
+    height: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    width: 40%;
+    color: #30AF5E;
+    text-align: center;
+    font-family: Arial;
+    outline: none;
+    box-shadow: inset 1px 2px 4px #ffffff7a;
+    margin-right: 2rem;
+}
+
