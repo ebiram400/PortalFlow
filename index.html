@@ -28,7 +28,7 @@
                 <span class="material-symbols-outlined color-green fs-2 text-shadow-green" style="cursor: pointer;">
                     phone_in_talk
                 </span>
-                <a href="tel:09382335182" class="text-decoration-none text-shadow-cyan" >
+                <a href="tel:09382335182" class="text-decoration-none text-shadow-cyan">
                     <span class="color-cyan fs-5 ms-2">
                         0938 233 5182
                     </span>
@@ -40,11 +40,9 @@
             <div class="col report-nav"></div>
 
             <div class="col user-nav d-flex flex-column align-items-center">
-                <div class="icon-user-nav color-green">
-                    <span class="material-symbols-outlined fs-1">
-                        person
-                    </span>
-                </div>
+                <span class="material-symbols-outlined fs-1 icon-user-nav color-green">
+                    person
+                </span>
                 <div class="text-user-nav color-green fs-6 text-nowrap">
                     ورود کارفرما
                 </div>
@@ -80,16 +78,26 @@
 
         <div
             class="dropfilter d-flex flex-column align-items-center position-absolute top-50 start-50 translate-middle">
-            <div class="col"><a href="./index.html"><img src="./front-react/public/images/logo-novin.png" class="logo-nav"></a></div>
+            <div class="col"><a href="./index.html"><img src="./front-react/public/images/logo-novin.png"
+                        class="logo-nav"></a></div>
             <div class="col color-cyan fs-1 fw-bold text-shadow-cyan">گروه فنی مهندسی نوین آشیان </div>
             <div class="color-green fs-4 fw-bold text-shadow-green">تضمین سریع زمان </div>
             <div class="color-green fs-4 fw-bold text-shadow-green mt-2">تضمین پایین ترین قیمت</div>
             <div class="col color-green fs-4 fw-bold text-shadow-green mt-2">تضمین بالاترین کیفیت</div>
         </div>
     </div>
+    <!-------------bread crumb--------->
+    <div class="d-flex justify-content-center mt-4">
+        <a href="#" class="text-decoration-none">
+            <div class="color-cyan fs-6 fw-bold">صفحه اول</div>
+        </a>
+        <span class="material-symbols-outlined color-cyan">
+            signpost
+        </span>
+    </div>
     <!------------services--------- -->
     <div class="container">
-        <div class="row mt-5 justify-content-between">
+        <div class="row mt-3 justify-content-between">
             <div class="col-md-5 mt-5">
 
             </div>
@@ -199,7 +207,8 @@
             <div class="col-md-4">
                 <div class="text-center mb-5"><img src="./front-react/public/images/logo-novin.png" width="200px"></div>
                 <div class="text-center">
-                    <a href="https://eitaa.com/Moeinrahimi110" class="m-2"><img src="./front-react/public/images/Group 2..svg"></a>
+                    <a href="https://eitaa.com/Moeinrahimi110" class="m-2"><img
+                            src="./front-react/public/images/Group 2..svg"></a>
                     <a href="tel:/09382335182" class="m-2"><img src="./front-react/public/images/Group 3..svg"></a>
                     <a href="t.me/:rahimimoein1" class="m-2"><img src="./front-react/public/images/telegram..svg"></a>
                     <a href="" class="m-2"><img src="./front-react/public/images/whatsapp..svg"></a>
@@ -248,13 +257,13 @@
             setTimeout(showSlides, 3000); // Change image every 2 seconds
         }
 
-        let services=document.querySelectorAll(".card_service");
+        let services = document.querySelectorAll(".card_service");
         services.forEach(element => {
-            element.addEventListener("click",(e)=>{
+            element.addEventListener("click", (e) => {
                 e.preventDefault();
                 console.log(element.childNodes[3].innerHTML);
-                if(element.childNodes[3].innerHTML == 'تغییر و ساخت'){
-                    window.location.href= "./services.html";
+                if (element.childNodes[3].innerHTML == 'تغییر و ساخت') {
+                    window.location.href = "./services.html";
                 }
 
             })
