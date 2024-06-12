@@ -1,0 +1,95 @@
+                <!-----------------------projects--------------------->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>حذف</th>
+                            <th>سرویس ها</th>
+                            <th>آدرس پروژه</th>
+                            <th>شماره</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button class="remove">&#x2715;</button></td>
+                            <td>تعویض کابینت و رنگ دیوار ها</th>
+                            <td>میدان شهدا</th>
+                            <td>1</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="newProject">
+                    <button class="add">&#x2B;</button>
+                    <input type="text" name="inputServices" id="inputServices" placeholder="سرویس ها">
+                    <input type="text" name="inputAddres" id="inputAddres" placeholder="آدرس پروژه جدید">
+                </div>
+
+
+
+
+
+                <!------------------------dropdown-menu--------------------->
+                <div class="dropdown-custom">
+                    <button class="dropdown-button">
+                        <span class="dropdown-icon ">&#9660;</span>
+                        <span class="textBtn">دسته بندی ها</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">پروژه ها</a>
+                        <a href="#">مقالات اضافه کردن و تغییر بنا</a>
+                        <a href="#">مقالات گچ کاری</a>
+                        <a href="#">مقالات انواع سقف و نورپردازی</a>
+                        <a href="#">مقالات انواع کفپوش</a>
+                        <a href="#">مقالات دیوار پوش</a>
+                        <a href="#">مقالات کابینت و کمد دیواری</a>
+                        <a href="#">مقالات پتینه کاری و نقاشی</a>
+                        <a href="#">مقالات انواع درب</a>
+                        <a href="#">مقالات تاسیسات برقی و گازکشی</a>
+                        <a href="#">مقالات لوله کشی آب و فاضلاب</a>
+                    </div>
+                </div>
+                <!-----------------------maghalat--------------------->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ویرایش/حذف</th>
+                            <th>عنوان مقاله</th>
+                            <th>شماره</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="remove">&#x2715;</button>
+                                <button class="edit">&#x270F;</button>
+                            </td>
+                            <td>چطور میتونم دیوار های خونم نم داره برطرفش کنم؟</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="newArticle">
+                    <button class="add">&#x2B;</button>
+                    <input type="text" name="inputObject" id="inputObject" placeholder="عنوان مقاله">
+                </div>
+
+
+
+                <!------------------------tinymce--------------------->
+                <input type="text" name="titr" id="titr" placeholder="عنوان مقاله پرسشی">
+                <div class="container-editor">
+                    <textarea id="mytextarea">متن مقاله اول که هنوز ویرایش نشده</textarea>
+                    <button onclick="getEditorContent()" class="click-change">ثبت تغییرات</button>
+                </div>
+
+
+
+
+                <!------------------------picture--------------------->
+                <div class="fs-5 fw-bold mt-3 mb-5">برای تغییر هر عکس روی آن کلیک کنید<br>
+                    سپس تصویر جایگزینش را از حافظه خود انتخاب کنید</div>
+                <input type="file" name="newpic" id="newpic" accept="*/image">
+
+                <label for="newpic"><img class="oldpic" src="./front-react/public/images/1.jpg"></label>
+                <label for="newpic"><img class="oldpic" src="./front-react/public/images/2.jpg"></label>
+                <label for="newpic"><img class="oldpic" src="./front-react/public/images/3.jpg"></label>
+                <label for="newpic"><img class="oldpic" src="./front-react/public/images/13.jpg"></label>
