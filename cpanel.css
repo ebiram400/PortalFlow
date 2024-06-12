@@ -3,6 +3,7 @@
 .rounded-start-4{border-radius: 3rem 0 0 3rem;}
 .mb-6{margin-bottom: 6rem;}
 .bg-green{background-color: #30AF5E;}
+.fs-7 {font-size: small;}
 *{
     margin: 0;
     padding: 0;
@@ -211,6 +212,7 @@ td{
     border-radius: 8px;
     width: 20%;
     min-width: 70px;
+    font-size: .7rem;
 }
 .userTable{
     border: 10px solid #fff;
@@ -218,4 +220,28 @@ td{
 .userTable td{
     border: 10px solid #fff;
     background-color: #ccc5c5;
+    font-size: .7rem;
+}
+#reports{
+    cursor: pointer;
+}
+#clearUser{
+    cursor: pointer;
+}
+
+/* ----------------------reports in Cpanel------------------ */
+#showReport{
+    cursor: pointer;
+}
+#clearReport{
+    cursor: pointer;
+}
+#level{
+    width: 4rem;
+    background-color: #fff;
+    border: 1px solid #30AF5E;
+    color: #1F3777;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
 }

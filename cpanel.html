@@ -19,21 +19,24 @@
         <div class="col-md-9 col-11 text-center ms-auto me-auto main">
             <img class="col-2 mt-3 mb-3" src="./front-react/public/images/logo-novin.png">
             <div class="border border-1 rounded-4 border-dark p-4 main mb-6">
-                <!-----------------------employers----------------->
-                <div class="adduser">
-                    <button class="text-light bg-green fw-bold p-2 border-0 rounded-3"><span class="d-md-inline d-none">اضافه کردن کارفرما</span>  +</button>
-                    <input type="text" name="newPhone" id="newPhone" placeholder="شماره تلفن" class="newEmployer">
-                    <input type="text" name="nameProject" id="nameProject" placeholder="نام پروژه" class="newEmployer">
-                    <input type="text" name="nameEmployer" id="nameEmployer" placeholder="نام کارفرما" class="newEmployer">
+                <!-----------------------Reports in cpanel----------------->
+                <div class="d-flex flex-column align-items-center mb-4">
+                    <div class="fs-5 fw-bold rounded-3 mb-3">نام پروژه</div>
+                    <div class="fs-7 fw-light mb-2">مراحل: 0-بازدید،1-قرارداد،2-شروع به کار،3-اتمام کار</div>
+                    <label for="level" class="fs-7"><input type="text" name="level" id="level" maxlength="1" pattern="[0-3]"> :مرحله فعلی</label>
                 </div>
+                <button class="text-light bg-green fw-bold p-2 border-0 rounded-3"><span>اضافه کردن گزارش</span> +</button>
                 <table class="userTable">
                     <tr>
                         <td>
-                            <div class="text-center">گزارشات <span class="material-symbols-outlined d-block">lab_profile</span></div>
+                            <div class="text-center" id="showReport">نمایش <span
+                                    class="material-symbols-outlined d-block">lab_profile</span></div>
                         </td>
                         <td>
-                            <div class="text-center">حذف <span class="material-symbols-outlined d-block">Delete_Forever</span></div>
+                            <div class="text-center" id="clearReport">حذف <span
+                                    class="material-symbols-outlined d-block">Delete_Forever</span></div>
                         </td>
+                        <td>نام فایل.pdf</td>
                     </tr>
                 </table>
             </div>
