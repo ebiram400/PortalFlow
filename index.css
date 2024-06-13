@@ -5,6 +5,16 @@
     font-family: Gorgia;
 }
 /* ----------------------general-----------------------*/
+@media (max-width: 576px) {
+    .fs-1{font-size: 24px !important;}
+    .fs-2{font-size: 18px !important;}
+    .fs-3{font-size: 16px !important;}
+    .fs-4{font-size: 14px !important;}
+    .fs-5{font-size: 12px !important;}
+    .fs-6{font-size: 10px !important;}
+    .fs-7{font-size: 8px !important;}
+    }
+.mt-6{margin-top: 10rem;}
 .color-nav {
     width: 100%;
     height: auto;
@@ -38,7 +48,7 @@
 }
 
 /* -----------------------------header---------------------------- */
-.user-nav {
+#user-nav {
     width: auto;
     min-height: auto;
     background-color: #1F3777;
@@ -46,6 +56,7 @@
     padding: 12px;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8);
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .mySlides {
@@ -89,7 +100,7 @@
 
 .logo-nav {
     width: 20vw;
-    margin-top: 40px;
+    margin-top: 20%;
 }
 
 /* ---------------------------------body-------------------------- */
@@ -101,6 +112,9 @@
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.7);
     text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    transition: transform 2s,opacity 1s;
+    opacity: 0;
+    transform: translateY(100px);
 }
 
 .circle {
@@ -113,6 +127,13 @@
     align-items: center;
     justify-content: center;
     box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.75);
+    transition: transform 2s,opacity 1s;
+    opacity: 0;
+    transform: translateY(100px);
+}
+.addanime{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info {

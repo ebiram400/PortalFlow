@@ -88,6 +88,7 @@ body{
     color: #30AF5E;
     width: auto;
     text-wrap: nowrap;
+    cursor: pointer;
 }
 .timer{
     color: #fff;
