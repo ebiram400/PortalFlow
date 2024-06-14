@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="reports.css">
+    <link rel="stylesheet" href="./css/reports.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"
@@ -132,8 +132,6 @@
             </div>
         </div>
     </div>
-
-    <!-------------script---------------->
 </body>
 
 </html>

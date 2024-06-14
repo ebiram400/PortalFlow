@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -89,7 +89,7 @@
 
         <div
             class="dropfilter d-flex flex-column align-items-center position-absolute top-50 start-50 translate-middle">
-            <div class="mt-md-2 mt-6"><a href="./index.html"><img src="./front-react/public/images/logo-novin.png"
+            <div class="mt-md-2 mt-6"><a href="./index.php"><img src="./front-react/public/images/logo-novin.png"
                         class="logo-nav"></a></div>
             <div class="color-cyan fs-1 fw-bold text-shadow-cyan mt-3">گروه فنی مهندسی نوین آشیان </div>
             <div class="color-green fs-4 fw-bold text-shadow-green mt-5">تضمین کمترین زمان </div>
@@ -150,15 +150,13 @@
                         <span class="material-symbols-outlined fs-1 mt-3">
                             House_Siding
                         </span>
-                        <div class="color-green fw-bold fs-5 text-nowrap"> دیوارپوش
-                        </div>
+                        <div class="color-green fw-bold fs-5 text-nowrap">دیوارپوش</div>
                     </div>
                     <div class="col-4 card_service text-center">
                         <span class="material-symbols-outlined fs-1 mt-3">
                             Roofing
                         </span>
-                        <div class="color-green fw-bold fs-5 text-nowrap">نورپردازی
-                        </div>
+                        <div class="color-green fw-bold fs-6">انواع سقف و نورپردازی</div>
                     </div>
                 </div>
                 <div class="row justify-content-around mt-3">
@@ -166,15 +164,13 @@
                         <span class="material-symbols-outlined fs-1 mt-3">
                             carpenter
                         </span>
-                        <div class="color-green fw-bold fs-6 "> کابینت و کمد دیواری
-                        </div>
+                        <div class="color-green fw-bold fs-6 ">کابینت و کمد دیواری</div>
                     </div>
                     <div class="col-4 card_service text-center">
                         <span class="material-symbols-outlined fs-1 mt-3">
                             Curtains
                         </span>
-                        <div class="color-green fw-bold fs-5 text-nowrap">انواع کفپوش
-                        </div>
+                        <div class="color-green fw-bold fs-5 text-nowrap">انواع کفپوش</div>
                     </div>
                 </div>
                 <div class="row justify-content-around mt-3">
@@ -182,15 +178,13 @@
                         <span class="material-symbols-outlined fs-1 mt-3">
                             door_open
                         </span>
-                        <div class="color-green fw-bold fs-5 text-nowrap">انواع درب
-                        </div>
+                        <div class="color-green fw-bold fs-5 text-nowrap">انواع درب</div>
                     </div>
                     <div class="col-4 card_service text-center">
                         <span class="material-symbols-outlined fs-1 mt-3">
                             brush
                         </span>
-                        <div class="color-green fw-bold fs-6 text-nowrap">پتینه و نقاشی
-                        </div>
+                        <div class="color-green fw-bold fs-6 text-nowrap">پتینه و نقاشی</div>
                     </div>
                 </div>
                 <div class="row justify-content-around mt-3">
@@ -198,15 +192,13 @@
                         <span class="material-symbols-outlined fs-1 mt-3">
                             valve
                         </span>
-                        <div class="color-green fw-bold fs-6">لوله کشی آب و فاضلاب
-                        </div>
+                        <div class="color-green fw-bold fs-6">لوله کشی آب و فاضلاب</div>
                     </div>
                     <div class="col-4 card_service text-center">
                         <span class="material-symbols-outlined fs-1 mt-3">
                             gastroenterology
                         </span>
-                        <div class="color-green fw-bold fs-5 text-nowrap">لوله کشی گاز
-                        </div>
+                        <div class="color-green fw-bold fs-6">تاسیسات برقی و گازی</div>
                     </div>
                 </div>
             </div>
@@ -304,33 +296,7 @@
     </div>
 
     <!-------------javascript------- -->
-    <script>
-        // click in services
-        let services = document.querySelectorAll(".card_service");
-        services.forEach(element => {
-            element.addEventListener("click", (e) => {
-                e.preventDefault();
-                localStorage.setItem("category", element.childNodes[3].innerHTML);
-                let stem = document.querySelectorAll('#stem');
-                stem.forEach(element => {
-                    element.remove();
-                });
-                let newpage = document.getElementById('new-page');
-                newpage.innerHTML = '<?php include "services.php"; ?>';
-            })
-        });
-        // click in projects
-        let info = document.querySelector(".info");
-        info.childNodes[3].addEventListener("click", e => {
-            e.preventDefault();
-            let stem = document.querySelectorAll('#stem');
-            stem.forEach(element => {
-                element.remove();
-            });
-            let newpage = document.getElementById('new-page');
-            newpage.innerHTML = '<?php include "projects.php"; ?>';
-        })
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="services.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/services.css">
 </head>
 
 <body>
@@ -87,14 +87,32 @@
             <div class="color-green fs-4 fw-bold text-shadow-green mt-2">تضمین پایین ترین قیمت</div>
             <div class="col color-green fs-4 fw-bold text-shadow-green mt-2">تضمین بالاترین کیفیت</div>
         </div>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Change image every 2 seconds
+            }
+        </script>
     </div>
-    <!------------chat--------- -->
+    <!----------------chat-------------->
     <div class="chat-body">
+        <!----------------bread crumb------------->
         <div class="bread-crumb">
             <div class="this-page d-flex align-items-center">
-                <img src="./front-react/public/images/اضافه کردن..svg" style="width: 50px;">
+                <img id="picPage" style="width: 50px;">
                 <div class="d-flex flex-column">
-                    <div class="there fs-6 fw-bold color-white">اضافه کردن و تغییر بنا</div>
+                    <div class="there fs-6 fw-bold color-white"></div>
                     <div class="fs-6 color-white fw-light">5 member</div>
                 </div>
             </div>
@@ -107,26 +125,62 @@
             <span class="material-symbols-outlined color-white">
                 signpost
             </span>
+            <script>
+                let namePage = document.getElementsByClassName('there')[0];
+                let thisPage = localStorage.getItem("category");
+                namePage.textContent = thisPage;
+                let picPage = document.getElementById('picPage');
+                switch (thisPage) {
+                    case 'تغییر و ساخت':
+                        picPage.setAttribute("src", "./front-react/public/images/اضافه کردن..svg");
+                        break;
+                    case 'گچ کاری':
+                        picPage.setAttribute("src", "./front-react/public/images/گچ کاری..svg");
+                        break;
+                    case 'انواع سقف و نورپردازی':
+                        picPage.setAttribute("src", "./front-react/public/images/انواع سقف..svg");
+                        break;
+                    case 'دیوارپوش':
+                        picPage.setAttribute("src", "./front-react/public/images/انواع دیوارپوش..svg");
+                        break;
+                    case 'انواع کفپوش':
+                        picPage.setAttribute("src", "./front-react/public/images/انواع کفپوش..svg");
+                        break;
+                    case " کابینت و کمد دیواری":
+                        picPage.setAttribute("src", "./front-react/public/images/کابینت..svg");
+                        break;
+                    case "پتینه و نقاشی":
+                        picPage.setAttribute("src", "./front-react/public/images/پتینه کاری و نقاشی..svg");
+                        break;
+                    case "انواع درب":
+                        picPage.setAttribute("src", "./front-react/public/images/انواع درب..svg");
+                        break;
+                    case "تاسیسات برقی و گازی":
+                        picPage.setAttribute("src", "./front-react/public/images/تاسیسات برقی و گازکشی..svg");
+                        break;
+                    case "لوله کشی آب و فاضلاب":
+                        picPage.setAttribute("src", "./front-react/public/images/لوله کشی آب و فاضلاب..svg");
+                        break;
+                }
+            </script>
         </div>
-        <div class="container">
+        <!-------------------body chat----------------->
+        <div id="chat" class="container">
             <div class="sended">سلام</div>
             <div class="response">سلام <br>وقت بخیر</div>
             <div class="response">درباره اضافه کردن یا تغییرات خونه سوالاتی هست که با ارسالشون بهتون جواب میدم. اگر سوال
                 دیگه ای دارید یا مشورتی میخواید که جزو این سوالات نیست میتونید پایین برام ارسالش کنید تا بهتون در اسرع
                 وقت جواب بدم</div>
-            <div class="req">میخوام یه اتاق به خونم اضافه کنم و میخوام عایق باشه. غیر از آجر چیز دیگه ای میشه به کار برد؟ <img src="./front-react/public/images/send1..svg" class="sendBtn1"></div>
-            <div class="sended">میخوام یه اتاق به خونم اضافه کنم و میخوام عایق باشه. غیر از آجر چیز دیگه ای میشه به کار برد؟</div>
-            <div class="response">درباره اضافه کردن یا تغییرات خونه سوالاتی هست که با ارسالشون بهتون جواب میدم. اگر سوال
-                دیگه ای دارید یا مشورتی میخواید که جزو این سوالات نیست میتونید پایین برام ارسالش کنید تا بهتون در اسرع
-                وقت جواب بدم</div>
-            <div class="comment d-flex align-items-center">
-                <img src="./front-react/public/images/send2..svg" class="sendBtn2">
-                <div class="input-comment">
-                    <input type="tel" name="telNewReq" id="telNewReq" placeholder="شماره تلفن برای ارسال پاسخ">
-                    <input type="text" name="textNewReq" id="textNewReq" placeholder="سوالتون اگر بین سوالات بالا نیست اینجا بنویسیدش تا پاسخ بدم">
-                </div>
+        </div>
+        <div class="comment d-flex align-items-center">
+            <img src="./front-react/public/images/send2..svg" class="sendBtn2">
+            <div class="input-comment">
+                <input type="tel" name="telNewReq" id="telNewReq" class="fs-6" placeholder="شماره تماس" maxlength="11">
+                <input type="text" name="textNewReq" id="textNewReq" class="fs-6" placeholder="سوال یا نظر دیگری دارم">
             </div>
         </div>
+    </div>
+    <script src="./js/services.js"></script>
     </div>
     <!-------------footer---------- -->
     <div class="footer">
@@ -167,24 +221,7 @@
         </div>
     </div>
 
-    <!-------------javascript------- -->
-    <script>
-        let slideIndex = 0;
-        showSlides();
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 2 seconds
-        }
-    </script>
 </body>
 
 </html>
