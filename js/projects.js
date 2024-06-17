@@ -1,27 +1,22 @@
-let slideIndex = 0;
-        showSlides();
 
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+async function Projects(){
 
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 2 seconds
-        }
-
-        let services=document.querySelectorAll(".card_service");
-        services.forEach(element => {
-            element.addEventListener("click",(e)=>{
-                e.preventDefault();
-                console.log(element.childNodes[3].innerHTML);
-                if(element.childNodes[3].innerHTML == 'تغییر و ساخت'){
-                    window.location.href= "./services.html";
-                }
-
-            })
-        });
+    let res=await fetch('projects.php');
+    let result=await res.json();
+    console.log(result);
+    result.forEach(element => {
+        var mytbody=document.querySelector('#mytbody');
+        let newtr=document.createElement('tr');
+        let td1=document.createElement('td');
+        td1.innerText=element.id;
+        let td2=document.createElement('td');
+        td2.innerText=element.address;
+        let td3=document.createElement('td');
+        td3.innerText=element.services;
+        newtr.appendChild(td1);
+        newtr.appendChild(td2);
+        newtr.appendChild(td3);
+        mytbody.appendChild(newtr);
+    });
+}
+document.addEventListener('DOMContentLoaded',Projects())

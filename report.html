@@ -36,19 +36,17 @@
             </div>
         </div>
         <div class="col d-flex flex-column align-items-end">
-
-            <div class="col report-nav"></div>
-
-            <div class="col user-nav d-flex flex-column align-items-center">
+            <div id="user-nav" class="col d-flex flex-column align-items-center">
                 <span class="material-symbols-outlined fs-1 icon-user-nav color-green">
                     exit_to_app
                 </span>
-                <div class="text-user-nav color-green fs-6 text-nowrap">
-                    خروج
-                </div>
+                <div class="text-user-nav color-green fs-6 text-nowrap">خروج</div>
             </div>
         </div>
     </div>
+    <script>
+
+    </script>
 
     <!-------------bread crumb--------->
     <div class="d-flex justify-content-center align-items-center mb-3">
@@ -67,12 +65,12 @@
     <!---------------reports------------>
     <div class="head-reports">
         <div class="fs-7 fw-bold d-flex">
-            <span class="material-symbols-outlined level1">
+            <span class="material-symbols-outlined level3">
                 check_box_outline_blank
             </span>اتمام کار
         </div>
         <div class="fs-7 fw-bold d-flex">
-            <span class="material-symbols-outlined level1">
+            <span class="material-symbols-outlined level2">
                 check_box_outline_blank
             </span>شروع به کار
         </div>
@@ -89,11 +87,12 @@
         <div class="project-name fs-4 fw-bold text-shadow-green">پروژه آقای مشهدی</div>
     </div>
 
-    <embed src="./pdf/1.pdf" class="pdf">
-    <embed src="./pdf/2.pdf" class="pdf">
+    <div id="poshe">
+        <embed src="./pdf/1.pdf" class="pdf">
+        <embed src="./pdf/2.pdf" class="pdf">
+    </div>
 
-
-
+    <script src="./js/report.js"></script>
     <!-------------footer------------>
     <div class="footer">
         <div class="row justify-content-around">

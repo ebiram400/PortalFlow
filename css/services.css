@@ -1,120 +1,11 @@
 
-/* ----------------------general-----------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Gorgia;
-}
-
-@font-face{
-    font-family: 'Iransans';
-    src: url("./front-react/public/Iranian\ Sans.ttf") format('truetype');
-}
-@media (max-width: 576px) {
-    .fs-1{font-size: 24px !important;}
-    .fs-2{font-size: 18px !important;}
-    .fs-3{font-size: 16px !important;}
-    .fs-4{font-size: 14px !important;}
-    .fs-5{font-size: 12px !important;}
-    .fs-6{font-size: 10px !important;}
-    .fs-7{font-size: 8px !important;}
-    }
-
-.color-nav {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: 1;
-    padding: 10px;
-}
-
-.fs-7 {
-    font-size: small;
-}
-
-.text-shadow-green {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
-}
-
-.text-shadow-cyan {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.color-cyan {
-    color: #1F3777;
-}
-
-.color-green {
-    color: #30AF5E;
-}
-
-.color-white {
-    color: #fff;
-}
-
-/* -----------------------------header---------------------------- */
-.user-nav {
-    width: auto;
-    min-height: auto;
-    background-color: #1F3777;
-    border-radius: 45px;
-    padding: 12px;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8);
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.mySlides {
-    display: none;
-}
-
-.slide-nav {
-    vertical-align: middle;
-    height: 91vh;
-    width: 100%;
-}
-
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    margin: auto;
-    z-index: 0;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 3s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .7
-    }
-
-    to {
-        opacity: .7
-    }
-}
-
-.dropfilter {
-    height: 91vh;
-    width: 100%;
-    backdrop-filter: blur(2px);
-}
-
-.logo-nav {
-    width: 20vw;
-    margin-top: 40px;
-}
-
 /* ---------------------------------body-------------------------- */
 .chat-body{
     width: 92%;
     margin: 4%;
     height: auto;
     background-color: #30AF5E;
-    background-image: url("./front-react/public/images/chat-background2.png");
+    background-image: url('../front-react/public/images/chat-background2.png');
     background-size: cover;
     border-radius: 20px;
     margin-top: 20px;
@@ -241,18 +132,4 @@
 }
 #textNewReq:focus,#telNewReq:focus{
     outline: none;
-}
-
-
-
-/* -------------------------------footer---------------------------- */
-.footer {
-    background-color: #30AF5E;
-    padding-bottom: 110px;
-    padding-top: 40px;
-    padding-right: 30px;
-    padding-right: 30px;
-    margin-top: 100px;
-    border-radius: 40px 40px 0 0;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
