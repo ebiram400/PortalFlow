@@ -6,6 +6,8 @@ fetch('./head.php').then((res) => res.json()).then((result) => {
         textnav.innerHTML = "خروج";
         let icon = document.getElementsByClassName('icon-user-nav')[0];
         icon.innerHTML = 'exit_to_app';
+        let reportnav=document.getElementsByClassName('report-nav')[0];
+        reportnav.innerHTML=' گزارشات کارفرما ';
     } else {
         let textnav = document.getElementsByClassName("text-user-nav")[0];
         textnav.innerHTML = 'ورود کارفرما';
@@ -26,6 +28,7 @@ usernav.addEventListener("click", e => {
             if (res.status == '200') {
                 ways[0].innerHTML = 'ورود کارفرما';
                 icon.innerHTML = 'person';
+                reportnav.innerHTML='';
             }
         })
     }
