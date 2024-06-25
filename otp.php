@@ -9,7 +9,7 @@ $gift = json_decode(file_get_contents("gift"));
 if (isset($gift['tel'])) {
     $tel = $gift['tel'];
     //tel in db?
-    $sql = $connect->prepare('SELECT tel FROM users where ?');
+    $sql = $connect->prepare('SELECT tel FROM users where tel=?');
     $sql->bind_param('s', $tel);
     $resq = $sql->get_result();
 

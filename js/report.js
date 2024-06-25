@@ -21,7 +21,7 @@ let poshe=document.getElementById('poshe');
 fetch('reports.php').then((res)=>res.json()).then((result)=>{
     result.forEach(element => {
         let embed=document.createElement('embed');
-        embed.src="./reports/"+element.filename;
+        embed.src="./reports/"+ element.filename;
         embed.classList.add('pdf');
         poshe.appendChild('embed');
     });
