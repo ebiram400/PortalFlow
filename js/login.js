@@ -40,7 +40,7 @@ inputPhone.addEventListener('input', sendcode);
 let inputCode = document.getElementById("Inputphon");
 async function verifyCode() {
     if (inputCode.value.length == 4) {
-        let response = await fetch('verifyOtp.php', {
+        let response = await fetch('../verifyOtp.php', {
             method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'Application/json' }, body: JSON.stringify({ tel: inputPhone.value, inputCode: inputCode.value })
         })
         let result = await response.json();

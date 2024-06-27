@@ -84,3 +84,22 @@ window.addEventListener("scroll", () => {
         }
     });
 })
+
+//login or exit 
+async function logorexit(){
+    let req=await fetch('../loginorexit.php');
+    let res=await req.json();
+    if(res.ok){
+        let icon=document.getElementById("icontarget");
+        let text=document.getElementById('texttarget');
+        if(res.status =='exit'){
+            icon.innerHTML='exit_to_app';
+            text.innerHTML='خروج';
+            
+        }else{
+            icon.innerHTML='person';
+            text.innerHTML='ورود کارفرما';
+        }
+    }
+}
+document.addEventListener("DOMContentLoaded",logorexit())
