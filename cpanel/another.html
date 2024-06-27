@@ -81,9 +81,9 @@
 
 
 <!------------------------picture--------------------->
-<div className="fs-5 fw-bold mt-3 mb-5">برای تغییر هر عکس روی آن کلیک کنید<br/>
+<div className="fs-5 fw-bold mt-3 mb-5">برای تغییر هر عکس روی آن کلیک کنید<br />
     سپس تصویر جایگزینش را از حافظه خود انتخاب کنید</div>
-<input type="file" name="newpic" id="newpic" accept="*/image"/>
+<input type="file" name="newpic" id="newpic" accept="*/image" />
 
 <label for="newpic"><img className="oldpic" src="./front-react/public/images/1.jpg" /></label>
 <label for="newpic"><img className="oldpic" src="./front-react/public/images/2.jpg" /></label>
@@ -95,7 +95,8 @@
 
 <!-----------------------employers----------------->
 <div className="adduser">
-    <button className="text-light bg-green fw-bold p-2 border-0 rounded-3"><span className="d-md-inline d-none">اضافه کردن کارفرما</span> +</button>
+    <button className="text-light bg-green fw-bold p-2 border-0 rounded-3"><span className="d-md-inline d-none">اضافه
+            کردن کارفرما</span> +</button>
     <input type="text" name="newPhone" id="newPhone" placeholder="شماره تلفن" className="newEmployer">
     <input type="text" name="nameProject" id="nameProject" placeholder="نام پروژه" className="newEmployer">
     <input type="text" name="nameEmployer" id="nameEmployer" placeholder="نام کارفرما" className="newEmployer">
@@ -103,7 +104,8 @@
 <table className="userTable">
     <tr>
         <td>
-            <div className="text-center" id="reports">گزارشات <span className="material-symbols-outlined d-block">lab_profile</span></div>
+            <div className="text-center" id="reports">گزارشات <span
+                    className="material-symbols-outlined d-block">lab_profile</span></div>
         </td>
         <td>
             <div className="text-center" id="clearUser">حذف <span
@@ -122,14 +124,19 @@
 <div className="d-flex flex-column align-items-center mb-4">
     <div className="fs-5 fw-bold rounded-3 mb-3">نام پروژه</div>
     <div className="fs-7 fw-light mb-2">مراحل: 0-بازدید،1-قرارداد،2-شروع به کار،3-اتمام کار</div>
-    <label for="level" className="fs-7"><input type="text" name="level" id="level" maxlength="1" pattern="[0-3]"> :مرحله فعلی</label>
+    <label for="level" className="fs-7">
+        <input type="text" name="level" id="level" maxlength="1" pattern="[0-3]"> :مرحله فعلی</label>
 </div>
-<button className="text-light bg-green fw-bold p-2 border-0 rounded-3"><span>اضافه کردن گزارش</span> +</button>
+<input type="file" id="pdfinput" hidden>
+<label for="pdfinput">
+    <button className="text-light bg-green fw-bold p-2 border-0 rounded-3">
+        <span>اضافه کردن گزارش</span> +</button>
+</label>
 <table className="userTable">
     <tr>
         <td>
-            <div className="text-center" id="showReport">نمایش <span
-                    className="material-symbols-outlined d-block">lab_profile</span></div>
+            <div className="text-center" id="showReport">نمایش <span 
+                className="material-symbols-outlined d-block">lab_profile</span></div>
         </td>
         <td>
             <div className="text-center" id="clearReport">حذف <span

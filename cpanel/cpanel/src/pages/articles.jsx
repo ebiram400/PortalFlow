@@ -1,3 +1,5 @@
+import { useState } from "react"
+import Tinyeditor from "./Tinyeditor"
 import Category from "./category"
 import Projects from "./projects"
 
@@ -5,28 +7,44 @@ import Projects from "./projects"
 
 export default function Articles({ title }) {
 
+    let [editing, setediting] = useState(null);
+    function newarticle() {
+        setediting(true);
+    }
+    async function Tableproject(){
+        let req=await fetch('../../backend/tableproject.php',{ method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ address:inputAddres.current.value , services:inputServices.current.value }) })
+        let res=await req.json();
+        if(!res.ok){
+            alert("ارتباط با سرور برای ذخیره پروژه جدید ناموفق بود")
+        }
+    }
 
     if (title != "پروژه ها") {
-        return (
-            <>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ویرایش/حذف</th>
-                            <th>عنوان مقاله</th>
-                            <th>شماره</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <Category title={title} />
-                    </tbody>
-                </table>
-                <div className="newArticle">
-                    <button className="add">&#x2B;</button>
-                    <input type="text" name="inputObject" id="inputObject" placeholder="عنوان مقاله" />
-                </div>
-            </>
-        )
+        if (!setediting) {
+            return (
+                <>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ویرایش/حذف</th>
+                                <th>عنوان مقاله</th>
+                                <th>شماره</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <Category title={title} setediting={setediting} />
+                        </tbody>
+                    </table>
+                    <div className="newArticle">
+                        <button className="add" onClick={() => { newarticle() }}>&#x2B;</button>
+                    </div>
+                </>
+            )
+        }else{
+            return(<>
+                <Tinyeditor/>
+            </>)
+        }
     } else {
         return (
             <>
@@ -44,9 +62,9 @@ export default function Articles({ title }) {
                     </tbody>
                 </table>
                 <div className="newProject">
-                    <button className="add">&#x2B;</button>
-                    <input type="text" name="inputServices" id="inputServices" placeholder="سرویس ها" />
-                    <input type="text" name="inputAddres" id="inputAddres" placeholder="آدرس پروژه جدید" />
+                    <button className="add" onClick={() => {Tableproject()}}>&#x2B;</button>
+                    <input type="text" ref={inputServices} id="inputServices" placeholder="سرویس ها" />
+                    <input type="text" ref={inputAddres} id="inputAddres" placeholder="آدرس پروژه جدید" />
                 </div>
             </>
         )
