@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Tinyeditor from 'tinyeditor'
+import Tinyeditor from './tinyeditor'
 
 export default function Category({ title ,setediting}) {
 
     let [res, setres] = useState(null);
 
     async function Delarticle(id) {
-        let req = await fetch('removeArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
+        let req = await fetch('http://localhost/moein/cpanel/cpanel/backend/removeArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
         let res = await req.json();
         if (!res.ok) {
             alert("ارتباط با سرور برای حذف برقرار نشد")
@@ -23,7 +23,7 @@ export default function Category({ title ,setediting}) {
 
     useEffect(() => {
         async () => {
-            let response = await fetch('../../backend/category.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title }) })
+            let response = await fetch('http://localhost/moein/cpanel/cpanel/backend/category.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title }) })
             setres(await response.json());
         }
     }, [])

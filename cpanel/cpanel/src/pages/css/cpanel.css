@@ -1,6 +1,6 @@
 /* ------------general------------- */
 .rounded-4{border-radius: 3rem;}
-.rounded-start-4{border-radius: 3rem 0 0 3rem;}
+.rs-4{border-radius: 2rem 0 0 2rem;}
 .mb-6{margin-bottom: 6rem;}
 .bg-green{background-color: #30AF5E;}
 .fs-7 {font-size: small;}
@@ -24,6 +24,7 @@
         justify-content: space-between;
         align-items: center;
     }
+    
 }
 .shadow-menu{box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.5);}
 

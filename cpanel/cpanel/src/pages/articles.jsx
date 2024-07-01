@@ -1,21 +1,25 @@
-import { useState } from "react"
-import Tinyeditor from "./Tinyeditor"
+import { useRef, useState } from "react"
+import Tinyeditor from "./tinyeditor"
 import Category from "./category"
 import Projects from "./projects"
 
 
 
 export default function Articles({ title }) {
+    let inputServices=useRef(null)
+    let inputAddres=useRef(null)
 
     let [editing, setediting] = useState(null);
     function newarticle() {
         setediting(true);
     }
     async function Tableproject(){
-        let req=await fetch('../../backend/tableproject.php',{ method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ address:inputAddres.current.value , services:inputServices.current.value }) })
+        let req=await fetch('http://localhost/moein/cpanel/cpanel/backend/tableproject.php',{ method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ address:inputAddres.current.value , services:inputServices.current.value }) })
         let res=await req.json();
         if(!res.ok){
             alert("ارتباط با سرور برای ذخیره پروژه جدید ناموفق بود")
+        }else if(res.end == "no"){
+            alert('ذخیره سازی در دیتابیس ناموفق بود')
         }
     }
 

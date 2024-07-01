@@ -11,7 +11,7 @@ export default function Form() {
         let name = adminName.current.value;
         let pass = adminPass.current.value;
 
-        fetch('../../backend/submitLogin.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'Application/json' }, body: JSON.stringify({ name: name, pass: pass }) })
+        fetch('http://localhost/moein/cpanel/cpanel/backend/submitLogin.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'Application/json' }, body: JSON.stringify({ name: name, pass: pass }) })
             .then(response => response.json())
             .then(result => {
                 if (result.end == 'ok') {

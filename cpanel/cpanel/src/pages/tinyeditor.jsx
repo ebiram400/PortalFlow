@@ -7,7 +7,7 @@ export default function Tinyeditor({ id, setediting }){
 
     if (id) {
         async () => {
-            let response = await fetch('../../backend/getarticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) })
+            let response = await fetch('http://localhost/moein/cpanel/cpanel/backend/getarticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) })
             let result = await response.json();
             if (!result.ok) {
                 alert('ارتباط با سرور بخش مقالات برقرار نشد');
@@ -23,13 +23,13 @@ export default function Tinyeditor({ id, setediting }){
         let text = editorRef.getContent();
         if (id) {
             async () => {
-                let req = await fetch('updateArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id, title: title, text: text }) })
+                let req = await fetch('http://localhost/moein/cpanel/cpanel/backend/updateArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id, title: title, text: text }) })
                 let res = await req.json()
                 if (!res.ok) { alert('ارتباط با سرور برای تغییر مقاله ناموفق بود') }
             }
         } else {
             async () => {
-                let req = await fetch('newArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title, text: text }) })
+                let req = await fetch('http://localhost/moein/cpanel/cpanel/backend/newArticle.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title, text: text }) })
                 let res = await req.json()
                 if (!res.ok) { alert('ارتباط با سرور برای ایجاد مقاله ناموفق بود') }
             }
@@ -53,7 +53,7 @@ export default function Tinyeditor({ id, setediting }){
                         menubar: false,
                         automatic_uploads: true,
                         image_title: true,
-                        images_upload_url: 'upload.php',
+                        images_upload_url: 'http://localhost/moein/cpanel/cpanel/backend/upload.php',
                         file_picker_types: 'image media',
                         file_picker_callback: (cb, value, meta) => {
                             const input = document.createElement('input')

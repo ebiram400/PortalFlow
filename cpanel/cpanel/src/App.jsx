@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import Login from './pages/login'
-import Form from "./pages/Form"
+import Form from "./pages/form"
 import Base from "./pages/base"
 import {Routes,Route} from 'react-router-dom'
-import './pages/css/cpanel.css'
 
 function App() {
   const [count, setCount] = useState(0)

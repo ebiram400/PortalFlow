@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
-import Form from "./Form"
-import Base from "./base"
 import { useNavigate } from "react-router-dom";
+import "../../../../bootstrap/dist/css/bootstrap.min.css"
 
 
 
@@ -9,8 +8,8 @@ export default function Login() {
     let [isadmin, setisadmin] = useState(0);
 
     useEffect(() => {
-        async () => {
-            fetch('../../backend/session-login-panel.php')
+        async function Api() {
+            fetch('http://localhost/moein/cpanel/cpanel/backend/session-login-panel.php')
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.isadmin == 'yes') {
@@ -20,7 +19,10 @@ export default function Login() {
                     }
                 })
         }
-    }, [])
+        Api()
+    },[])
+
+
     let navigate = useNavigate()
     if (isadmin == 0) {
         return (

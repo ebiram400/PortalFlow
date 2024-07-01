@@ -10,7 +10,7 @@ export default function Users() {
     let nameProject=useRef();
     let nameEmployer=useRef();
     async function AddEmployer(){
-        let req=await fetch('../../backend/newEmployer.php',{ method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ name:nameEmployer,project:nameProject.current.value,phone: newPhone.current.value })})
+        let req=await fetch('http://localhost/moein/cpanel/cpanel/backend/newEmployer.php',{ method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ name:nameEmployer,project:nameProject.current.value,phone: newPhone.current.value })})
         let res=await req.json()
         if(!res.ok){
             alert("ارتباط با سرور برای ثبت کارفرمای جدید برقرار نشد")

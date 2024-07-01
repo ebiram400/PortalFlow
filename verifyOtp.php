@@ -1,7 +1,7 @@
 <?php
 include_once ("./connect.php");
 session_start();
-$gift = json_decode(file_get_contents("gift"));
+$gift = json_decode(file_get_contents("php://input"));
 // verify code
 if (isset($gift['inputCode'])) {
     $inputCode=$gift['inputCode'];

@@ -10,7 +10,7 @@ export default function Pdfreports(reporting) {
     }
 
     async function Removepdf(id) {
-        let req = await fetch('../../backend/removepdf.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
+        let req = await fetch('http://localhost/moein/cpanel/cpanel/backend/removepdf.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
         let res = await req.json();
         if (!res.ok) { alert('ارتباط با سرور برای حذف گزارش برقرار نشد') }
         else {
@@ -20,7 +20,7 @@ export default function Pdfreports(reporting) {
 
     useEffect(() => {
         async () => {
-            let reques = await fetch('../../backend/reportsmaster.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ userid: reporting }) })
+            let reques = await fetch('http://localhost/moein/cpanel/cpanel/backend/reportsmaster.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ userid: reporting }) })
             let [respons, setrespons] = useState(await reques.json());
             if (!respons.ok) { alert('ارتباط با سرور برای نمایش گزارشات برقرار نشد') }
         }

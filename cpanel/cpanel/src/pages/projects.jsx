@@ -5,7 +5,7 @@ export default function Projects() {
     let [res, setres] = useState(null)
 
     async function DelProject(id) {
-        let req = await fetch('../../backend/removeProjects.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
+        let req = await fetch('http://localhost/moein/cpanel/cpanel/backend/removeProjects.php', { method: 'post', headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
         let result = await req.json();
         if (!result.ok) {
             alert("ارتباط با سرور برای حذف برقرار نشد")
@@ -15,10 +15,11 @@ export default function Projects() {
     }
 
     useEffect(() => {
-        async () => {
-            let response = await fetch('../../backend/projects.php')
+        async function Fetchdata(){
+            let response = await fetch('http://localhost/moein/cpanel/cpanel/backend/projects.php')
             setres(await response.json());
         }
+        Fetchdata();
     }, [])
     if (!res) {
         return (<img src="../../public/loding.svg" />)

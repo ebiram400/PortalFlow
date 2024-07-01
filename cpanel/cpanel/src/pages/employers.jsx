@@ -6,13 +6,13 @@ export default function Employers({ setreporting }) {
 
     useEffect(() => {
         async () => {
-            let req = await fetch("../../backend/employers.php")
+            let req = await fetch("http://localhost/moein/cpanel/cpanel/backend/employers.php")
             let [res, setres] = useState(await req.json())
         }
     }, [])
 
     async function Removeuser(id) {
-        let reques = await fetch('../../backend/removeuser.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
+        let reques = await fetch('http://localhost/moein/cpanel/cpanel/backend/removeuser.php', { method: 'post', headers: { 'accept': '*/*', 'Content-Type': 'application/json' }, body: JSON.stringify({ id: id }) });
         let respons = await reques.json()
         if (!respons.ok) {
             alert('ارتباط با سرور برای حذف کارفرما برقرار نشد')
