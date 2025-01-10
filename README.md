@@ -18,13 +18,13 @@ PortalFlow is a user and document management system designed to provide a seamle
 - MySQL  
 
 ## Folder Structure
-
+```
 PortalFlow/
 ├── backend/         # Laravel project for RESTful API
 ├── admin-panel/     # React.js admin panel
 ├── user-panel/      # HTML/CSS/JS for user portal
 └── README.md        # Project documentation
-
+```
 ## Installation  
 ### Prerequisites  
 - Docker
