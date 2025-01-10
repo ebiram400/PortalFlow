@@ -27,36 +27,26 @@ PortalFlow/
 
 ## Installation  
 ### Prerequisites  
-- PHP >= 8.1  
-- Node.js >= 16  
-- Composer  
-- MySQL  
+- Docker
+- Docker Compose 
 
 ### Steps  
-1. Clone the repository:  
-   `bash
-   git clone https://github.com/your-username/PortalFlow.git
+1. Clone the repository:
 
-2. Set up the backend:
-
-cd backend  
-composer install  
-cp .env.example .env  
-php artisan key:generate  
-php artisan migrate
+git clone https://github.com/your-username/PortalFlow.git
+cd PortalFlow
 
 
-3. Set up the admin panel:
+2. Build and run the project using Docker Compose:
 
-cd ../admin-panel  
-npm install  
-npm start
+docker-compose up --build
 
 
-4. Open the user panel:
-Serve index.html in the user-panel folder using any local server.
+3. Access the application:
 
+Admin Panel: http://localhost:3000
 
+User Panel: http://localhost:8080 (or the static files served locally)
 
 
 ---
