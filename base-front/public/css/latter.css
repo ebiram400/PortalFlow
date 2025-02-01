@@ -1,0 +1,137 @@
+@import './variables.css';
+
+.letterhead {
+    position: relative;
+    max-width: 1000px;
+    margin: var(--small) auto;
+    background: var(--light);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.background-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(26, 77, 124, 0.03) 25%, 
+        transparent 25%) -50px 0,
+    linear-gradient(225deg, 
+        rgba(26, 77, 124, 0.03) 25%, 
+        transparent 25%) -50px 0,
+    linear-gradient(315deg, 
+        rgba(26, 77, 124, 0.03) 25%, 
+        transparent 25%),
+    linear-gradient(45deg, 
+        rgba(26, 77, 124, 0.03) 25%, 
+        transparent 25%);
+    background-size: 100px 100px;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo-container {
+    text-align: center;
+    display: flex;
+    gap: 4rem;
+}
+
+.logo-img {
+    height: 8rem;
+}
+
+.company-title {
+    text-align: center;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.company-slogan {
+    font-size: 16px;
+    color: var(--darkGray);
+    margin-top: 5px;
+}
+
+.latter-date{
+    font-size: x-small;
+}
+
+.decorative-line {
+    height: 3px;
+    background: linear-gradient(to right, 
+        transparent, 
+        var(--dark), 
+        var(--darkGray), 
+        transparent);
+    margin: 20px 0;
+}
+
+.content-area {
+    min-height: 500px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(26, 77, 124, 0.1);
+    line-height: 1.8;
+}
+
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(26, 77, 124, 0.1);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.contact-item {
+    padding: 15px;
+    background: rgba(26, 77, 124, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(26, 77, 124, 0.08);
+    transform: translateY(-2px);
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+    .letterhead {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .contact-item:hover {
+        transform: none;
+    }
+}

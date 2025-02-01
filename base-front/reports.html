@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/reports.css">
+    <link rel="stylesheet" href="./public/css/latter.css">
+    <link rel="stylesheet" href="./public/css/invoice.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#">
+            <img src="./public/images/logo.png" alt="logo" class="logo">
+        </a>
+        <div class="navbar-menu">
+            <div class="navbar-item">
+                <div class="background-item">
+                    <img src="./public/images/icon/1.png" class="path-navbar-item">
+                    <div class="text-navbar-item">reports</div>
+                </div>
+                <img src="./public/images/icon/reports.svg" class="icon-navbar-item">
+            </div>
+            <div class="navbar-item">
+                <div class="background-item">
+                    <img src="./public/images/icon/1.png" class="path-navbar-item">
+                    <div class="text-navbar-item">contact us</div>
+                </div>
+                <img src="./public/images/icon/contact us.svg" class="icon-navbar-item">
+            </div>
+            <div class="navbar-item">
+                <div class="background-item">
+                    <img src="./public/images/icon/1.png" class="path-navbar-item">
+                    <div class="text-navbar-item">Logout</div>
+                </div>
+                <img src="./public/images/icon/Logout.svg" class="icon-navbar-item">
+            </div>
+            <div class="navbar-item">
+                <div class="background-item">
+                    <img src="./public/images/icon/1.png" class="path-navbar-item">
+                    <div class="text-navbar-item">language</div>
+                </div>
+                <img src="./public/images/icon/language.svg" class="icon-navbar-item">
+            </div>
+        </div> 
+    </header>
+
+    <div class="project-name">گزارش پروژه <span>فلان</span></div>
+
+    <div class="letterhead">
+        <div class="background-pattern"></div>
+        <div class="content-wrapper">
+            <header class="header">
+                <div class="logo-container">
+                    <img src="./public/images/logo.png" class="logo-img">
+                    <div class="company-title">
+                        <h1 class="company-name">گروه فنی مهندسی نوین آشیان</h1>
+                        <p class="company-slogan">پیشگام در صنعت ساخت و ساز مدرن</p>
+                    </div>
+                </div>
+                <div class="latter-date">
+                    <div>
+                        <span>تاریخ:</span>
+                        <span id="date"></span>
+                    </div>
+                    <div>
+                        <span>پیوست:</span>
+                        <span>ندارد</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="decorative-line"></div>
+
+            <main class="content-area">
+                <!-- محتوای نامه اینجا قرار می‌گیرد -->
+            </main>
+
+            <footer class="footer">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>دفتر مرکزی</strong>
+                        <p>مشهد، خیابان هاشمی نژاد </p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>تماس با ما</strong>
+                        <p>تلفن: ٦٥٤ ٢٥٠٠ ۹۱۵ ۹۸+</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>ارتباط آنلاین</strong>
+                        <p>NovinAshian.ir</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="letterhead">
+        <div class="background-pattern"></div>
+        <div class="content-wrapper">
+            <header class="header">
+                <img src="./public/images/logo.png" class="logo-img">
+                <div class="invoice-info">
+                    <div>
+                        <span>نام پروژه:</span>
+                        <span>بهجت12</span>
+                    </div>
+                    <div>
+                        <span>از تاریخ:</span>
+                        <span>1401/06/21</span>
+                    </div>
+                    <div>
+                        <span>تا تاریخ:</span>
+                        <span>1401/09/09</span>
+                    </div>
+                </div>
+            </header>
+
+            <table class="table-area">
+                <thead>
+                    <tr>
+                        <th>تاریخ</th>
+                        <th>شرح</th>
+                        <th>دریافتی</th>
+                        <th>پرداختی</th>
+                        <th>مانده</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1403/06/23</td>
+                        <td>تسویه کارگر و بنا</td>
+                        <td></td>
+                        <td>3000000</td>
+                        <td>-3000000</td>
+                    </tr>
+                    <tr>
+                        <td>1403/06/23</td>
+                        <td>واریز کارفرما</td>
+                        <td>5000000</td>
+                        <td></td>
+                        <td>2000000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td rowspan="1">جمع دریافتی</td>
+                        <td rowspan="1">5000000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td rowspan="1">جمع پرداختی</td>
+                        <td rowspan="1">3000000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td rowspan="1">مانده حساب</td>
+                        <td rowspan="1">2000000</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <footer class="footer-invoice">
+                tell: +98 915 250 0654
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

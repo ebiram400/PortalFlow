@@ -1,0 +1,61 @@
+@import "./variables.css";
+
+.category-carts {
+    display: flex;
+    margin: var(--larger);
+    width: calc(100vw - 2 * var(--larger));
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap: var(--smaller);
+}
+
+.category-carts::-webkit-scrollbar {
+    display: none;
+}
+
+.category-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-cart {
+    width: calc(var(--larger)*3.12);
+}
+
+.text-cart {
+    color: var(--light);
+    position: absolute;
+    font-family: var(--font1);
+    font-size: var(--small);
+    bottom: var(--larger);
+    max-width: calc(var(--larger)*2.7);
+    text-align: center;
+    transform: translateY(50%);
+}
+
+.button-scrolls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: var(--larger);
+    gap: var(--normal);
+    font-family: var(--font2);
+    font-size: var(--smaller);
+    color: var(--dark);
+}
+
+.button-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--smaller);
+    cursor: pointer;
+}
+
+.arrow-scroll {
+    width: calc(var(--smaller)*2/3);
+}

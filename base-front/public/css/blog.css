@@ -1,0 +1,164 @@
+@import './variables.css';
+
+.chat-head {
+    font-family: var(--font1);
+    font-size: var(--smaller);
+    font-weight: 900;
+    color: var(--light);
+    background-color: var(--darkGray);
+    border-start-start-radius: var(--smaller);
+    border-start-end-radius: var(--smaller);
+    text-align: end;
+    padding: var(--small);
+    width: calc(100vw - var(--larger)*2);
+    margin: 0 auto;
+}
+
+/* بدنه چت */
+.chat-body {
+    width: calc(100vw - var(--larger)*2);
+    margin: 0 auto;
+    padding: var(--small);
+    background-color: var(--light);
+    border-radius: 0 0 var(--smaller) var(--smaller);
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    background-image: url('../images/chat-background.png');
+    background-size: auto;
+    font-family: var(--font1);
+    font-size: calc(var(--smaller));
+}
+
+.sended{
+    min-width: var(--larger);
+    max-width: 80%;
+    width: max-content;
+    height: max-content;
+    border-radius: var(--smaller) var(--smaller) 0 var(--smaller);
+    margin-left: auto;
+    direction: rtl;
+    margin-top: calc(var(--smaller)*1/2);
+    /* opacity: .8;
+    transform: translateX(100%);
+    transition: opacity 2s ease-in-out,transform 2s ease-in-out; */
+    background-color: var(--lightBlue);
+    padding: calc(var(--smaller)*2/3) calc(var(--smaller));
+    color: var(--dark);
+}
+.anime-sended{
+    transform:translateX(0) !important;
+    opacity: 1 !important;
+}
+
+.response{
+    min-width: var(--larger);
+    max-width: 80%;
+    width: max-content;
+    height: max-content;
+    border-radius: var(--smaller) var(--smaller) var(--smaller) 0;
+    direction: rtl;
+    margin-top: calc(var(--smaller)*1/2);
+    /* opacity: .8;
+    transform: translateX(-100%);
+    transition: opacity 2s ease-in-out,transform 2s ease-in-out; */
+    background-color: var(--white);
+    padding: calc(var(--smaller)*2/3) calc(var(--smaller));
+    color: var(--dark);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.req{
+    background-color: var(--white);
+    min-width: var(--larger);
+    max-width: 80%;
+    width: max-content;
+    height: max-content;
+    padding: calc(var(--smaller)*2/3) calc(var(--smaller));
+    border-radius: var(--small);
+    margin-left: auto;
+    direction: rtl;
+    margin-top: calc(var(--smaller)*1/2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smaller);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.req:hover .sendBtn1 {
+    width: calc(var(--small) - var(--smaller)*1/3);
+    padding-left: calc(var(--smaller)*1/3);
+}
+
+.sendBtn1{
+    width: var(--small);
+    cursor: pointer;
+}
+
+/* chat foot */
+
+.sendBtn2{
+    width: var(--normal);
+    margin-left: 0px;
+    margin-right: var(--smaller);
+    cursor: pointer;
+    background-color: var(--darkGray);
+    border-radius: var(--larger);
+    padding: calc(var(--smaller)*1/2);
+    box-shadow: 3px -5px 3px 3px inset #f9f9f92d, -3px 5px 3px 1px inset #f9f9f92d;
+    transform: scaleX(-1);
+}
+.sendBtn2:hover {
+    box-shadow: none;
+}
+
+.chat-foot {
+    display: flex;
+    margin-top: var(--normal);
+    justify-content: center;
+    align-items: center;
+}
+
+.input-comment{
+    width: 88%;
+    max-height: var(--larger);
+    overflow: hidden;
+    background-color: var(--white);
+    border-radius: var(--larger);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#telNewReq{
+    text-align: center;
+    padding: var(--smaller);
+    border-radius: var(--larger);
+    box-shadow: inset 5px 0px 4px -1px rgba(0, 0, 0, 0.2);
+    border: none;
+    font-family: var(--font1);
+    font-size: calc(var(--smaller)*2/3);
+}
+
+#textNewReq{
+    width: 88%;
+    border: none;
+    /* border-left: 1px solid var(--dark); */
+    box-shadow: 0 4px 12px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--larger);
+    text-align: right;
+    padding: var(--smaller);
+    font-family: var(--font1);
+    font-family: var(--font1);
+    font-size: calc(var(--smaller)*2/3);
+}
+
+#textNewReq:focus,#telNewReq:focus{
+    outline: none;
+}

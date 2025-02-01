@@ -1,0 +1,62 @@
+  @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazirmatn-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/vazir/Vazirmatn-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'sansita';
+    src: url('../fonts/SansitaOne.woff2') format('woff2');
+    font-style: normal;
+  }
+
+:root {
+    --darkGray: #2b2e3a;
+    --dark: #000;
+    --white: #fff;
+    --light: #f9f9f9;
+    --lightBlue: #9FEAF9;
+
+    --smaller: calc(16 / 1280 * 100vw);
+    --small: calc(24 / 1280 * 100vw);
+    --normal: calc(32 / 1280 * 100vw);
+    --large: calc(40 / 1280 * 100vw);
+    --larger: calc(60 / 1280 * 100vw);
+
+    --iconSize1: calc(50 / 1280 * 100vw);
+    --iconSize2: calc(60 / 1280 * 100vw);
+    --iconSize3: calc(90 / 1280 * 100vw);
+
+
+    --width: calc(144 / 1280 * 100vw);
+    --height: calc(120 / 1280 * 100vw);
+
+    --font1: "Vazir";
+    --font2: "sansita";
+}
+
+body{
+    background-color: var(--light);
+}

@@ -61,7 +61,7 @@ Setup
 
 [ ] Build a React.js admin panel.
 
-[ ] Design the user panel with HTML/CSS/JavaScript.
+[*] Design the user panel with HTML/CSS/JavaScript.
 
 
 Admin Panel Features

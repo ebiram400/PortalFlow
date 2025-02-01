@@ -1,0 +1,26 @@
+@import './variables.css';
+
+.footer {
+    width: 100%;
+    height: var(--larger);
+    background-color: var(--darkGray);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section {
+    color: var(--lightBlue);
+    font-family: var(--font1);
+    font-size: var(--smaller);
+    padding: var(--smaller);
+    padding-right: var(--normal);
+    padding-left: var(--normal);
+}
+
+.footer-section:hover {
+    background-color: var(--dark);
+}
