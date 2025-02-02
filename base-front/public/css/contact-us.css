@@ -16,9 +16,12 @@
     color: var(--lightBlue);
     font-family: var(--font1);
     font-size: var(--smaller);
-    padding: var(--smaller);
-    padding-right: var(--normal);
-    padding-left: var(--normal);
+    padding-top: var(--smaller);
+    padding-bottom: var(--smaller);
+    padding-right: 4vw;
+    padding-left: 4vw;
+    text-wrap: nowrap;
+    text-align: center;
 }
 
 .footer-section:hover {

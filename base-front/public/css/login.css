@@ -1,8 +1,8 @@
 @import './variables.css';
 
 .background-blur {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     backdrop-filter: blur(10px);
     top: 0px;
@@ -11,13 +11,21 @@
 
 .background-login {
     position: relative;
-    top: var(--small);
+    transform: translateY(-50%);
+    top: 50vh;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    height: 80vh;
+    max-height: 100vw;
+    width: 90vw;
+}
+
+.bg-image-login {
+    width: 100%;
+    height: 100%;
 }
 
 .close-login {
@@ -25,6 +33,7 @@
     top: 0px;
     left: 0px;
     cursor: pointer;
+    width: var(--larger);
 }
 
 .text-login {
@@ -33,6 +42,11 @@
     color: var(--light);
     font-family: var(--font1);
     font-size: var(--smaller);
+}
+
+input{
+    border: none;
+    outline: none;
 }
 
 .input-tel {
@@ -53,6 +67,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--normal);
+    width: fit-content;
 }
 
 .input-password {
@@ -61,7 +76,7 @@
     text-align: center;
     font-family: var(--font2);
     letter-spacing: var(--smaller);
-    width: 20%;
+    width: calc(var(--larger)*2);
 }
 
 .timer {

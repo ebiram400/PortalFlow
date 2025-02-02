@@ -3,18 +3,21 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: var(--thin);
 }
 
 .logo {
     width: var(--width);
     height: var(--height);
-    margin: var(--small);
+    padding: var(--smaller);
 }
 
 .navbar-menu{
     display: flex;
-    margin: var(--small);
-    gap: var(--smaller);
+    margin-right: var(--thin);
+    justify-content: space-between;
+    gap: var(--thin);
 }
 
 .navbar-item {

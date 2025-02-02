@@ -14,6 +14,7 @@
 
 .support-method {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: var(--small);
@@ -26,8 +27,14 @@
     align-items: center;
     justify-content: center;
     gap: calc(var(--smaller)*1/4);
+    cursor: pointer;
+}
+
+.img-phone {
+    width: var(--larger)
 }
 
 .pointer {
     cursor: pointer;
+    width: var(--larger);
 }

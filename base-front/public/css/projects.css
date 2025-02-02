@@ -8,6 +8,12 @@
     gap: var(--small);
 }
 
+@media screen and (max-width:768px) {
+    .project-carts {
+        flex-direction: column;
+    }
+}
+
 .project-cart {
     width: calc(var(--larger)*5);
     height: calc(var(--larger)*4);
@@ -70,16 +76,19 @@
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 10%), 0 -1px 4px 0px rgba(0, 0, 0, 10%);
     transform: translateY(var(--smaller));
     transform: rotate(1.8deg);
+    z-index: 10;
 }
 
 .project-cart2{
-    box-shadow: 0 7px 15px 0px rgba(0, 0, 0, 25%), 0 -1px 4px 0px rgba(0, 0, 0, 10%);
+    box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 15%), 0 -1px 4px 0px rgba(0, 0, 0, 10%);
     transform: rotate(-3deg);
+    z-index: 20;
 }
 
 .project-cart3{
-    box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 15%), 0 -1px 4px 0px rgba(0, 0, 0, 10%);
+    box-shadow: 0 7px 15px 0px rgba(0, 0, 0, 25%), 0 -1px 4px 0px rgba(0, 0, 0, 10%);
     transform: rotate(6deg);
+    z-index: 30;
 }
 
 .adhesive1 {
@@ -119,6 +128,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: var(--smaller);
 }
 
 .text-count-projects {

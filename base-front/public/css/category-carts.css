@@ -2,7 +2,10 @@
 
 .category-carts {
     display: flex;
-    margin: var(--larger);
+    margin-top: var(--larger);
+    margin-bottom: var(--larger);
+    padding-left: var(--larger);
+    padding-right: var(--larger);
     width: calc(100vw - 2 * var(--larger));
     overflow-y: hidden;
     overflow-x: scroll;
@@ -23,7 +26,7 @@
 }
 
 .img-cart {
-    width: calc(var(--larger)*3.12);
+    width: calc(var(--width)*2);
 }
 
 .text-cart {

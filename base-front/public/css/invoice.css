@@ -1,16 +1,18 @@
 @import './variables.css';
 
-.letterhead {
+.template {
     position: relative;
-    max-width: 1000px;
+    max-width: calc(100vw - var(--larger)*4);
+    min-width: 33vh;
     margin: var(--small) auto;
     background: var(--light);
-    padding: 40px;
+    padding: var(--normal);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: 15px;
     overflow: hidden;
     direction: rtl;
 }
+
 
 .background-pattern {
     position: absolute;
@@ -39,14 +41,14 @@
     z-index: 2;
 }
 
-.header {
+.latterhead {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 .logo-img {
-    height: 8rem;
+    height: 10vw;
 }
 
 .invoice-info {
@@ -118,9 +120,25 @@
 }
 
 .footer-invoice {
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: var(--normall);
+    padding-top: var(--smaller);
     text-align: center;
     width: 100%;
     font-family: var(--font2);
+    font-size: calc(var(--smaller)*2/3);
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+    .letterhead {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .template {
+        min-height: 1000px;
+    }
 }

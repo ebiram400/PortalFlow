@@ -1,62 +1,104 @@
-  @font-face {
-    font-family: 'Vazir';
-    src: url('../fonts/vazir/Vazirmatn-Light.woff2') format('woff2');
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/vazir/Vazirmatn-Light.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Vazir';
-    src: url('../fonts/vazir/Vazirmatn-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/vazir/Vazirmatn-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Vazir';
-    src: url('../fonts/vazir/Vazirmatn-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/vazir/Vazirmatn-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Vazir';
-    src: url('../fonts/vazir/Vazirmatn-Black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/vazir/Vazirmatn-Black.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
-  }
+}
 
-  @font-face {
-    font-family: 'sansita';
-    src: url('../fonts/SansitaOne.woff2') format('woff2');
+@font-face {
+    font-family: "sansita";
+    src: url("../fonts/SansitaOne.woff2") format("woff2");
     font-style: normal;
-  }
+}
 
 :root {
+    /* رنگ‌ها - بدون تغییر */
     --darkGray: #2b2e3a;
     --dark: #000;
     --white: #fff;
     --light: #f9f9f9;
-    --lightBlue: #9FEAF9;
+    --lightBlue: #9feaf9;
 
-    --smaller: calc(16 / 1280 * 100vw);
-    --small: calc(24 / 1280 * 100vw);
-    --normal: calc(32 / 1280 * 100vw);
-    --large: calc(40 / 1280 * 100vw);
-    --larger: calc(60 / 1280 * 100vw);
+    /* اندازه‌های پایه برای دسکتاپ */
+    --thin: .75rem;
+    --smaller: 1rem; /* 16px */
+    --small: 1.5rem; /* 24px */
+    --normal: 2rem; /* 32px */
+    --large: 2.5rem; /* 40px */
+    --larger: 3.75rem; /* 60px */
 
-    --iconSize1: calc(50 / 1280 * 100vw);
-    --iconSize2: calc(60 / 1280 * 100vw);
-    --iconSize3: calc(90 / 1280 * 100vw);
+    --iconSize1: 3.125rem; /* 50px */
+    --iconSize2: 3.75rem; /* 60px */
+    --iconSize3: 5.625rem; /* 90px */
 
-
-    --width: calc(144 / 1280 * 100vw);
-    --height: calc(120 / 1280 * 100vw);
+    --width: 9rem; /* 144px */
+    --height: 7.5rem; /* 120px */
 
     --font1: "Vazir";
     --font2: "sansita";
 }
 
-body{
+/* تبلت */
+@media screen and (max-width: 1024px) {
+    :root {
+        --smaller: 0.875rem; /* 14px */
+        --small: 1.25rem; /* 20px */
+        --normal: 1.75rem; /* 28px */
+        --large: 2.25rem; /* 36px */
+        --larger: 3rem; /* 48px */
+
+        --iconSize1: 2.5rem; /* 40px */
+        --iconSize2: 3rem; /* 48px */
+        --iconSize3: 4.5rem; /* 72px */
+
+        --width: 7rem; /* 112px */
+        --height: 6rem; /* 96px */
+    }
+}
+
+/* موبایل */
+@media screen and (max-width: 768px) {
+    :root {
+        --thin: 0.1rem;
+        --smaller: 0.5rem; /* 12px */
+        --small: 1rem; /* 16px */
+        --normal: 1.5rem; /* 24px */
+        --large: 2rem; /* 32px */
+        --larger: 2.5rem; /* 40px */
+
+        --iconSize1: 2rem; /* 32px */
+        --iconSize2: 2.5rem; /* 40px */
+        --iconSize3: 3.75rem; /* 60px */
+
+        --width: 5.5rem; /* 88px */
+        --height: 4.5rem; /* 72px */
+    }
+}
+
+body {
     background-color: var(--light);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font1), var(--font2);
 }

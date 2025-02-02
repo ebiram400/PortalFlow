@@ -1,11 +1,12 @@
 @import './variables.css';
 
-.letterhead {
+.template {
     position: relative;
-    max-width: 1000px;
+    max-width: calc(100vw - var(--larger)*4);
+    min-width: 33vh;
     margin: var(--small) auto;
     background: var(--light);
-    padding: 40px;
+    padding: var(--normal);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: 15px;
     overflow: hidden;
@@ -39,20 +40,14 @@
     z-index: 2;
 }
 
-.header {
+.latterhead {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.logo-container {
-    text-align: center;
-    display: flex;
-    gap: 4rem;
-}
-
 .logo-img {
-    height: 8rem;
+    height: 10vh;
 }
 
 .company-title {
@@ -60,7 +55,7 @@
 }
 
 .company-name {
-    font-size: 28px;
+    font-size: 2.7vw;
     font-weight: bold;
     color: var(--dark);
     margin: 0;
@@ -68,13 +63,13 @@
 }
 
 .company-slogan {
-    font-size: 16px;
+    font-size: var(--smaller);
     color: var(--darkGray);
     margin-top: 5px;
 }
 
 .latter-date{
-    font-size: x-small;
+    font-size: calc(var(--smaller)*2/3);
 }
 
 .decorative-line {
@@ -88,13 +83,14 @@
 }
 
 .content-area {
-    min-height: 500px;
+    min-height: 60vw;
     padding: 30px;
     background: white;
     border-radius: 10px;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.03);
     border: 1px solid rgba(26, 77, 124, 0.1);
     line-height: 1.8;
+    font-size: var(--smaller);
 }
 
 .footer {
@@ -106,15 +102,20 @@
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--small);
     text-align: center;
 }
 
 .contact-item {
-    padding: 15px;
+    padding: var(--smaller);
     background: rgba(26, 77, 124, 0.03);
     border-radius: 8px;
     transition: all 0.3s ease;
+    font-size: var(--smaller);
+}
+
+.contact-item > p {
+    font-size: calc(var(--smaller)*2/3);
 }
 
 .contact-item:hover {
@@ -133,5 +134,8 @@
     }
     .contact-item:hover {
         transform: none;
+    }
+    .content-area {
+        min-width: 800px;
     }
 }
