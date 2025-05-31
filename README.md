@@ -10,19 +10,19 @@ PortalFlow is a user and document management system designed to provide a seamle
 
 ## Technologies Used  
 ### Backend  
-- Laravel: RESTful API for data management.  
+- fast api: RESTful API for data management.  
 ### Frontend  
-- Admin Panel: React.js  
-- User Panel: HTML, CSS, JavaScript (Fetch API)  
+- Admin Panel: next.js  
+- User Panel: next.js 
 ### Database  
 - MySQL  
 
 ## Folder Structure
 ```
 PortalFlow/
-├── backend/         # Laravel project for RESTful API
-├── admin-panel/     # React.js admin panel
-├── user-panel/      # HTML/CSS/JS for user portal
+├── backend/         # fast api project for RESTful API
+├── admin-panel/     # next.js admin panel
+├── user-panel/      # next.js for user portal
 └── README.md        # Project documentation
 ```
 ## Installation  
@@ -55,11 +55,11 @@ Checklist of Tasks and Features
 
 Setup
 
-[ ] Set up Laravel backend with basic RESTful routes.
+[ ] Set up fast api backend with basic RESTful routes.
 
 [ ] Configure MySQL database.
 
-[ ] Build a React.js admin panel.
+[ ] Build a next.js admin panel.
 
 [*] Design the user panel with HTML/CSS/JavaScript.
 
